@@ -1,10 +1,12 @@
 #importer les librairies nécessaires
 import json
 from pathlib import Path
+import os
 
 
 #indication du chemin du fichier json 'livres.json'
-Json_file=Path(__file__).parent.parent/'livres.json'
+json_filename = os.environ.get('BOOKS_JSON_FILE', 'livres.json')
+Json_file=Path(__file__).parent.parent/json_filename
 
 
 #fonction de lecture du fichier 'livres.json'

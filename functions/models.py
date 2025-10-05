@@ -40,6 +40,10 @@ def post_book():
         #retournement du livre créé ainsi que le code 201 created
         return jsonify(new_book),201
     
+    #capture spécifique des erreurs de JSON invalide
+    except (TypeError, ValueError):
+        return jsonify({'error': 'Invalid JSON format'}), 400
+
     #gestion et capture des erreurs
     except Exception as e:
         return jsonify({'error':f'{e}'}),500

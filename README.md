@@ -47,4 +47,11 @@ Ce projet est un projet visant en mettre en place une API basée sur les livres 
 Une fois l'installation terminée et l'environnement activé, lancez le script en exécutant la commande suivante dans le terminal :
 
 ```bash
-python app.py
+python app.py 
+``` 
+pour le test de l'Api avec Postman (recommandé)
+
+```bash
+pytest 
+``` 
+pour le test rapide et automatique de l'API
